@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default function Home (){
-    //CardComponent
-    function Card ({size,children}){
+    //Card Component
+    function Card ({size, classes, children}){
         //rendersizer
-        const calculateSize=(cardSize)=>{
+        const calculateSize=(cardSize,classes)=>{
                 let size;
                 switch(cardSize){
                     case 'sm':
@@ -23,18 +23,19 @@ export default function Home (){
                         size="w-64"
                         break;
                 }
-                return size;
+                return size+classes;
         }
         //render
         return(
-            <section className={calculateSize(size)}>
+            <section className={calculateSize(size,classes)}>
                 {children}
             </section>
         )
     }
-    function SplitPane({left,right}){
+    //Split Pane Component
+    function SplitPane({left,right,classes}){
         return(
-            <section className="w-full h-full flex">
+            <section className={`w-full h-full flex ${classes.root}`}>
                 <div className={classes.left}>{left}</div>
                 <div className={classes.right}>{right}</div>
             </section>
@@ -42,14 +43,19 @@ export default function Home (){
     }
     function HomeBanner(){
         return(
-            <div className="w-full h-24">
+            <div className="w-full h-48 border-solid border-black border-2 ">
                  <SplitPane 
                     classes={
-                        {left:'w-1/6',
-                        right:"w-5/6"}
+                        {
+                            root:"border-1 border-black",
+                            left:'w-1/6',
+                            right:"w-5/6"
+                        }
                     }
                     left={
-                        <div>Left</div>
+                        <Card class="flex column" size='md'>
+                            
+                        </Card>
                     }
                     right={
                         <div>Right</div>
