@@ -37,12 +37,12 @@ export default function App() {
   function renderPage(route){
     return <Route key={route.url} path={route.url} element={route.page}/>
   }
-
+  //Main App
   return (
     <div className="font-sans px-4">
 
       <NavBar routes={routes} />
-      //Main Area
+      
       <Routes>
         {
           routes.map(route=>

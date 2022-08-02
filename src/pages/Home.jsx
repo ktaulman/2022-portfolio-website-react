@@ -1,64 +1,32 @@
 import React from 'react';
+import Card from "../components/Card"
+import SplitPane from '../components/SplitPane';
 
 export default function Home (){
     //Card Component
-    function Card ({size, classes, children}){
-        //rendersizer
-        const calculateSize=(cardSize,classes)=>{
-                let size;
-                switch(cardSize){
-                    case 'sm':
-                        size= 'w-64'
-                        break;
-                    case 'md':
-                        size='w-80'
-                        break;
-                    case 'lg':
-                        size='w-96'
-                        break;
-                    case 'full':
-                        size="w-full"
-                        break;
-                    default:
-                        size="w-64"
-                        break;
-                }
-                return size+classes;
-        }
-        //render
-        return(
-            <section className={calculateSize(size,classes)}>
-                {children}
-            </section>
-        )
-    }
+    
     //Split Pane Component
-    function SplitPane({left,right,classes}){
-        return(
-            <section className={`w-full h-full flex ${classes.root}`}>
-                <div className={classes.left}>{left}</div>
-                <div className={classes.right}>{right}</div>
-            </section>
-        )
-    }
+  
     function HomeBanner(){
         return(
-            <div className="w-full h-48 border-solid border-black border-2 ">
+            <div className="w-64 h-48 border-solid border-black border-2 ">
                  <SplitPane 
                     classes={
                         {
-                            root:"border-1 border-black",
-                            left:'w-1/6',
-                            right:"w-5/6"
+                            root:"w-full border-1 border-black",
+                            left:'w-1/2 border-2 border-solid border-red-600',
+                            right:"w-1/2 border-2 border-solid border-blue-600"
                         }
                     }
                     left={
                         <Card class="flex column" size='md'>
-                            
+                            "left"
                         </Card>
                     }
                     right={
-                        <div>Right</div>
+                        <Card class="flex column" size='md'>
+                          "left"
+                        </Card>
                     }
                 />
             </div>
@@ -68,7 +36,34 @@ export default function Home (){
     
     return(
         <main>
-            <HomeBanner/>
+            {/* Banner */}
+            <SplitPane 
+                    classes={
+                        {
+                            root:"w-64  border-1 border-black",
+                            left:'w-1/6 border-2 border-solid border-red-600',
+                            right:"w-5/6 border-2 border-solid border-blue-600"
+                        }
+                    }
+                    left={
+                        <div>
+                            <p>Hello, my name is</p>
+                            <h1>Kevin Taulman</h1>
+                            <p>
+                                I build web applications.
+                            </p>
+                            <div>
+                                <a>Button</a>
+                                <a>Github Image</a>
+                                <a>Linkedin Image</a>
+                            </div>
+                        </div>
+                    }
+                    right={
+                        <div>Right</div>
+                    }
+                />
+            
             {/* 
             //Banner - Row 
                 //Intro (L = Title, Text, R=Img/GIF)
