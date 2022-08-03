@@ -1,83 +1,93 @@
 import React from 'react';
-import Card from "../components/Card"
-import SplitPane from '../components/SplitPane';
+import Card from "@/components/Card"
+import SplitPane from '@/components/SplitPane';
+import SmallBar from "@/components/SmallBar"
+import homeBannerImage from "@/assets/banner-home.svg"
+import githubLogo from "@/assets/logo-github.png"
+import linkedinLogo from "@/assets/logo-linkedin.png"
 
 export default function Home (){
-    //Card Component
-    
-    //Split Pane Component
-  
-    function HomeBanner(){
+    //local state 
+    const cards=[];
+    //rendering 
+    function renderCards(){
         return(
-            <div className="w-64 h-48 border-solid border-black border-2 ">
-                 <SplitPane 
-                    classes={
-                        {
-                            root:"w-full border-1 border-black",
-                            left:'w-1/2 border-2 border-solid border-red-600',
-                            right:"w-1/2 border-2 border-solid border-blue-600"
-                        }
-                    }
-                    left={
-                        <Card class="flex column" size='md'>
-                            "left"
-                        </Card>
-                    }
-                    right={
-                        <Card class="flex column" size='md'>
-                          "left"
-                        </Card>
-                    }
-                />
+            <Card
+            />
+        )
+    }
+    
+    function renderProjects(){}
+
+    function renderTechnologies(){}
+
+    //Components to Export 
+ 
+    function Section({className,children}){
+        return <div className={className}>{children}</div>
+    }
+    function ContactForm(){
+        return(
+            <div>
+
             </div>
         )
     }
-
-    
     return(
-        <main>
+        <main className="pt-2">
             {/* Banner */}
             <SplitPane 
                     classes={
                         {
-                            root:"w-64  border-1 border-black",
-                            left:'w-1/6 border-2 border-solid border-red-600',
-                            right:"w-5/6 border-2 border-solid border-blue-600"
+                            root:"w-full  border-1 border-black",
+                            left:'w-1/3',
+                            right:"w-2/3"
                         }
                     }
                     left={
-                        <div>
+                        <div className="h-full flex flex-col justify-center items-center text-3xl">
                             <p>Hello, my name is</p>
-                            <h1>Kevin Taulman</h1>
+                            <h1 className="py-3 font-bold">Kevin Taulman</h1>
                             <p>
                                 I build web applications.
                             </p>
-                            <div>
-                                <a>Button</a>
-                                <a>Github Image</a>
-                                <a>Linkedin Image</a>
+                            <div className="placeholder-gray-300 mt-3 flex justify-evenly items-center">
+                                {/* //Resume Tag */}
+                                <a href='/' className=" text-cyan-800 text-lg font-bold px-2 py-1 rounded border-2 border-cyan-800 hover:bg-cyan-800 hover:text-white">View Resume</a>
+                                <a ><img className="w-10" src={githubLogo}/></a>
+                                <a ><img className="w-10" src={linkedinLogo}/></a>
                             </div>
                         </div>
                     }
                     right={
-                        <div>Right</div>
+                        <div>
+                            <img src={homeBannerImage} alt='home banner'/>
+                        </div>
                     }
                 />
-            
-            {/* 
-            //Banner - Row 
-                //Intro (L = Title, Text, R=Img/GIF)
-
-            <br/>
-            //Bar- Row
-                //Card- SM-3x (Icon + Experience Title + Exp. Description)
-            //Section- Full - Row 
-                // Card= LG - (L= About Me + Text , R= Photo)
-            //Section - Full
-                //Title- Full
-            /Section- Column
-                //Card (L = Img , R = Title + Text + 2 x Buttons) 
-            */}
+            {/* Card Panel  */}
+            <Section className="w-full h-36">
+                <h2></h2>
+                {renderCards()}
+            </Section>
+            <Section>
+                <SmallBar/>
+                <h2 className="text-2xl">About Me</h2>
+            </Section>
+            <Section className="w-full h-48 6">
+                <SmallBar className=" m-auto mr-0"/>
+                <h2 className=' text-right text-2xl'>Projects</h2>
+                {renderProjects()}
+                {/* <button>See More</button> */}
+            </Section>
+            <Section>
+                <SmallBar/>
+                <h2 className="text-2xl">Technologies</h2>
+                {renderTechnologies()}
+            </Section>
+            <Section>
+                 <ContactForm/>
+            </Section>
         </main>
     )
 }

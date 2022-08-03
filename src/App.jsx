@@ -39,7 +39,7 @@ export default function App() {
   }
   //Main App
   return (
-    <div className="font-sans px-4">
+    <div className="font-sans">
 
       <NavBar routes={routes} />
       

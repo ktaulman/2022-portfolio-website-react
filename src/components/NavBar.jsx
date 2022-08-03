@@ -11,7 +11,7 @@ export default function NavBar({routes}){
         const isActivePageLink=location.pathname===route.url?<ArrowCircleLeftIcon className="ml-2 h-4 w-4 text-white"/>:<div></div>
         //return Link and if active return Page
         return(
-            <div key={route.url} className="flex justify-between items-center px-4 py-2 hover:underline hover:font-bold">
+            <div key={route.url} className="flex justify-between items-center px-4 ml-3 py-2 hover:underline hover:font-bold">
                 <Link key={route.label}  to={route.url}>{route.label}</Link>
                 {isActivePageLink}
             </div> 
@@ -19,7 +19,7 @@ export default function NavBar({routes}){
     }
     //main 
     return(
-        <header className="bg-gradient-to-r from-green-400 via-blue-500" >
+        <header className=" bg-cyan-800" >
             <nav className=" text-white font-medium w-4/5 flex justify-between">
                 {
                     routes.map(route=>renderLink(route,location))

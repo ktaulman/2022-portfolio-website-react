@@ -27,6 +27,7 @@ export default function Card ({size, classes, children}){
     return(
         <section className={calculateSize(size)}>
             {children}
+            <h3></h3>
         </section>
     )
 }
