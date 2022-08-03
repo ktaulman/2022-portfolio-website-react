@@ -5,16 +5,42 @@ import SmallBar from "@/components/SmallBar"
 import homeBannerImage from "@/assets/banner-home.svg"
 import githubLogo from "@/assets/logo-github.png"
 import linkedinLogo from "@/assets/logo-linkedin.png"
+import { AcademicCapIcon } from '@heroicons/react/solid';
 
 export default function Home (){
     //local state 
-    const cards=[];
+    const cards=[
+        {
+            size:"md",
+            classes:{
+                root:'bg-red-400',
+                title:'',
+                description:'',
+                
+            },
+            direction:'vertical',
+            title:'Cross-Industry Experience',
+            description:['Before web development I did .....','Technologies used were'],
+        }
+    ];
     //rendering 
-    function renderCards(){
-        return(
-            <Card
-            />
-        )
+    function renderCards(cards){
+       return cards.map((card)=>{
+                    const {}=card 
+                  return(  
+                  <Card
+                    key={card}
+                    size="md"
+                    classes={
+                       card.classes
+                    }
+                    direction={card.direction}
+                    description={card.description}
+                  >
+                    //Hello
+                    </Card>
+                  )
+        })
     }
     
     function renderProjects(){}
@@ -65,21 +91,26 @@ export default function Home (){
                         </div>
                     }
                 />
-            {/* Card Panel  */}
-            <Section className="w-full h-36">
+            {/* Card Panel Section */}
+            <Section className="w-full h-36 bg-slate-200 py-4">
                 <h2></h2>
-                {renderCards()}
+                {renderCards(cards)}
             </Section>
+
+            {/* About Me Section  */}
             <Section>
                 <SmallBar/>
                 <h2 className="text-2xl">About Me</h2>
             </Section>
+
+            {/* Projects Section */}
             <Section className="w-full h-48 6">
                 <SmallBar className=" m-auto mr-0"/>
                 <h2 className=' text-right text-2xl'>Projects</h2>
                 {renderProjects()}
                 {/* <button>See More</button> */}
             </Section>
+            {/* Technologies Icons */}
             <Section>
                 <SmallBar/>
                 <h2 className="text-2xl">Technologies</h2>

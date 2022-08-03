@@ -1,9 +1,12 @@
 import React from "react";
 
-export default function Card ({size, classes, children}){
+export default function Card ({size, classes, children, title,direction,description}){
     //rendersizer
-    const calculateSize=(cardSize,classes)=>{
+    const calculateCSS=(cardSize,direction,rootClass)=>{
             let size;
+            let dir; 
+            let root;
+            //compute cardSize
             switch(cardSize){
                 case 'sm':
                     size= 'w-64'
@@ -21,13 +24,38 @@ export default function Card ({size, classes, children}){
                     size="w-64"
                     break;
             }
-            return size+classes;
+            //compute direction
+            switch(direction){
+                case 'vertical':
+                    dir='flex flex-col justify-center items-center'
+                    break;
+                default:
+                    dir="flex flex-row justify-start items-center"
+                    break; 
+            }
+            //compute root cllas
+            root=rootClass?rootClass:''
+            
+            size=size+" "+dir+" "+root+" "+"rounded-xl";
+
+            return size;
     }
-    //render
+    function renderDescription(description,css){
+        return description.map(paragraph=><p className={css?css:''}>{paragraph}</p>)
+    }
+    
     return(
-        <section className={calculateSize(size)}>
+        <section className={calculateCSS(size,direction,classes.root)}>
+            {/*Title */}
+            <h2 className={classes.title} alt={title}>{title}</h2>
+
+            {/* Description */}
+            {
+                renderDescription(description,classes.description)
+            }
+
+            {/* Flexible Area for Buttons,Icons,Liks */}
             {children}
-            <h3></h3>
         </section>
     )
 }

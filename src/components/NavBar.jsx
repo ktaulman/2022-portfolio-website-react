@@ -5,6 +5,7 @@ import { ArrowCircleLeftIcon } from '@heroicons/react/solid'
 export default function NavBar({routes}){
     //access router history 
     const location=useLocation();
+    
     //helper rendering function
     function renderLink (route,location){
         //conditionally render active page icon
@@ -19,12 +20,15 @@ export default function NavBar({routes}){
     }
     //main 
     return(
-        <header className=" bg-cyan-800" >
-            <nav className=" text-white font-medium w-4/5 flex justify-between">
-                {
-                    routes.map(route=>renderLink(route,location))
-                }  
+        <header className=" bg-cyan-800 flex justify-center" >
+            {/* Desktop Navigation Menu */}
+            <nav className="w-4/5 text-white font-medium  flex justify-between">
+                {/* Rendering Links */}
+                    {
+                        routes.map(route=>renderLink(route,location))
+                    }  
             </nav>
+            {/* Mobile Navigation Menu  */}
         </header>
     )
 }
