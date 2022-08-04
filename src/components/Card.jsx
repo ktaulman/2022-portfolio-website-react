@@ -74,7 +74,10 @@ export default function Card ({size, classes, children, title,direction,descript
             }
 
             {/* Flexible Area for Buttons,Icons,Liks */}
-            {controls}
+
+            <div className="flex flex-row">
+                {controls}    
+            </div>
             {children}
             
         </section>

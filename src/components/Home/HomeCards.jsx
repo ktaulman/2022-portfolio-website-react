@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from "@/components/Card"
 import Section from "@/components/General/Section"
-import { AcademicCapIcon,CubeIcon } from '@heroicons/react/solid';
+import { AcademicCapIcon,CubeIcon,UserCircleIcon } from '@heroicons/react/solid';
 
 export default function HomeCards(){
         //cards
@@ -9,15 +9,15 @@ export default function HomeCards(){
             //Card 1
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-orange-700 py-10 px-6 w-64 ',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-10 px-6 w-60 flex flex-col justify-center',
                     title:'font-bold uppercase text-black text-xl text-center py-3',
-                    description:'text-lg text-black text-center py-3',
+                    description:'text-md text-black text-center py-3',
                     
                 },
                 direction:'vertical',
                 media:{
                     type:'icon',
-                    src:<AcademicCapIcon className=' text-orange-700 w-20'/>,
+                    src:<AcademicCapIcon className=' text-emerald-500 w-20'/>,
                 },
                 title:'Cross-Industry Experience',
                 description:['Before web development, I worked in account management in the IT Research and Cloud fields. Helping business leaders and developers alike.'],
@@ -25,15 +25,15 @@ export default function HomeCards(){
             //Card 2 
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-orange-700 py-10 px-6 w-64',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-10 px-6 w-60 flex flex-col justify-center',
                     title:'font-bold uppercase text-black text-center text-xl py-3',
-                    description:'text-lg text-black text-center py-3',
+                    description:'text-md text-black text-center py-3',
                     
                 },
                 direction:'vertical',
                 media:{
                     type:'icon',
-                    src:<CubeIcon className='text-orange-700 w-20'/>,
+                    src:<CubeIcon className='text-emerald-500 w-20'/>,
                 },
                 title:'Full Stack Development',
                 description:["For me, it's nice to know all sides of the process. Whatever technology will help us build apps, I'll learn. "],
@@ -41,18 +41,18 @@ export default function HomeCards(){
             //Card 3 
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-orange-700 py-10 px-6 w-64',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-10 px-6 w-60 flex flex-col justify-center',
                     title:'font-bold uppercase text-black text-center text-xl py-3',
-                    description:'text-lg text-black text-center py-3',
+                    description:'text-md text-black text-center py-3',
                     
                 },
                 direction:'vertical',
                 media:{
                     type:'icon',
-                    src:<AcademicCapIcon className='text-orange-700 w-20'/>,
+                    src:<UserCircleIcon className='text-emerald-500 w-20'/>,
                 },
-                title:'Cross-Industry Experience',
-                description:['Before web development I did .....','Technologies used were'],
+                title:'Front End Expertise',
+                description:["I've developed projects in both Vue and React as well as learned libaries like Tailwind and Bootstrap.","I try to adhere to Material Design but love learning new things."],
             },
     
         ];
@@ -75,7 +75,7 @@ export default function HomeCards(){
              })
          }
     return(
-            <Section className="w-full py-4 flex justify-evenly">
+            <Section className="w-full py-4 flex justify-center space-x-10">
                 {renderCards(cards)}
             </Section>
     )

@@ -10,13 +10,13 @@ export default function HomeBanner(){
                 <SplitPane 
                     classes={
                         {
-                            root:"w-full  border-1 border-black",
-                            left:'w-1/3',
-                            right:"w-2/3"
+                            root:"w-full my-16  border-1 border-black",
+                            left:'w-1/2',
+                            right:"w-1/2"
                         }
                     }
                     left={
-                        <div className="h-full flex flex-col justify-center items-center text-3xl">
+                        <div className="h-full flex flex-col justify-end items-center text-3xl">
                             <p>Hello, my name is</p>
                             <h1 className="py-3 font-bold">Kevin Taulman</h1>
                             <p>
@@ -32,7 +32,7 @@ export default function HomeBanner(){
                     }
                     right={
                         <div>
-                            <img src={homeBannerImage} alt='home banner'/>
+                            <img src={homeBannerImage}  alt='home banner'/>
                         </div>
                     }
                 />
