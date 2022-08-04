@@ -24,7 +24,7 @@ export default function HomeBanner(){
                             </p>
                             <div className="placeholder-gray-300 mt-3 flex justify-evenly items-center">
                                 {/* //Resume Tag */}
-                                <a href='/' className=" text-white text-lg font-bold px-2 py-1 rounded border-2 border-cyan-800 hover:bg-cyan-800 hover:text-white">View Resume</a>
+                                <a href='/' className=" text-sky-600 text-lg font-bold px-2 py-1 rounded border-2 border-sky-600 hover:bg-sky-600 hover:text-white">View Resume</a>
                                 <a><img className="w-10" src={githubLogo}/></a>
                                 <a><img className="w-10" src={linkedinLogo} /></a>
                             </div>
