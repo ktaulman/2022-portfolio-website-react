@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Card ({size, classes, children, title,direction,description}){
+export default function Card ({size, classes, children, title,direction,description,media,controls}){
     //rendersizer
     const calculateCSS=(cardSize,direction,rootClass)=>{
             let size;
@@ -27,7 +27,7 @@ export default function Card ({size, classes, children, title,direction,descript
             //compute direction
             switch(direction){
                 case 'vertical':
-                    dir='flex flex-col justify-center items-center'
+                    dir='flex flex-col justify-start items-center'
                     break;
                 default:
                     dir="flex flex-row justify-start items-center"
@@ -41,11 +41,30 @@ export default function Card ({size, classes, children, title,direction,descript
             return size;
     }
     function renderDescription(description,css){
-        return description.map(paragraph=><p className={css?css:''}>{paragraph}</p>)
+        return description.map(paragraph=><p key={paragraph} className={css?css:''}>{paragraph}</p>)
+    }
+    function renderMedia(media){
+        let result;
+        switch(media.type){
+            case 'icon':
+                result=media.src; 
+                break;
+            case 'image':
+                result=<img className={media.className} src={media.src} alt='card media'/>
+                break;
+            case'video':
+                break;
+            default:
+                break;
+        }
+
+        return result; 
     }
     
     return(
         <section className={calculateCSS(size,direction,classes.root)}>
+            {/* Media */}
+            {renderMedia(media)}
             {/*Title */}
             <h2 className={classes.title} alt={title}>{title}</h2>
 
@@ -55,7 +74,9 @@ export default function Card ({size, classes, children, title,direction,descript
             }
 
             {/* Flexible Area for Buttons,Icons,Liks */}
+            {controls}
             {children}
+            
         </section>
     )
 }

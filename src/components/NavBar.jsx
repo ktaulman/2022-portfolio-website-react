@@ -20,7 +20,7 @@ export default function NavBar({routes}){
     }
     //main 
     return(
-        <header className=" bg-cyan-800 flex justify-center" >
+        <header className=" bg-sky-600 flex justify-center" >
             {/* Desktop Navigation Menu */}
             <nav className="w-4/5 text-white font-medium  flex justify-between">
                 {/* Rendering Links */}
