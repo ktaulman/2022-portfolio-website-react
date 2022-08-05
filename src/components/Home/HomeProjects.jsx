@@ -72,7 +72,7 @@ export default function HomeProject(){
      }
     // const {classes,direction,title,description,controls,media}=card 
     return(
-        <Section className="w-full 6">
+        <Section className="w-full ">
             <SmallBar className=" m-auto mr-0"/>
             <h2 className=' text-right text-4xl'>Projects</h2>
             
@@ -106,7 +106,7 @@ export default function HomeProject(){
                     />
                     <SplitPane
                         left={
-                            <img className="border-2 border-solid rounded-xl border-emerald-500 mr-12 w-full w-[600px]" src={projectThreeImage} alt="project image"/>
+                            <img className="border-2 border-solid rounded-xl border-emerald-500 mr-12 w-[600px]" src={projectThreeImage} alt="project image"/>
                         }
                         right={
                             renderCard(cards[2])
