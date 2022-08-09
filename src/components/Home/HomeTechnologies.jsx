@@ -25,6 +25,7 @@ export default function HomeTechnologies(){
     }
     
    return(  
+    //
     <>
     <SmallBar/>
     <h2 className="text-2xl">Technologies</h2>
