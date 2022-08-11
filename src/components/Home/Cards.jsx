@@ -58,11 +58,11 @@ export default function Cards(){
         ];
         //rendering 
         function renderCards(cards){
-            return cards.map((card)=>{
+            return cards.map((card,i)=>{
                      const {classes,direction,title,description,controls,media}=card 
                        return(  
                          <Card
-                             key={card}
+                             key={`${i}_card`}
                              size="md"
                              classes={classes}
                              direction={direction}

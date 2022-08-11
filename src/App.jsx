@@ -3,11 +3,12 @@ import {Routes,Route} from "react-router-dom"
 //Components
 import NavBar from "@/components/NavBar"
 import Footer from "@/components/Footer"
+import Spacer from "@/components/Spacer"
 //Pages
-import Home from "@/pages/Home"
-import Projects from '@/pages/Projects'
-import About from "@/pages/About"
-import Contact from "@/pages/Contact"
+import HomePage from "@/pages/HomePage"
+import ProjectsPage from '@/pages/ProjectsPage'
+import AboutPage from "@/pages/AboutPage"
+import ContactPage from "@/pages/ContactPage"
 
 export default function App() {
   //add page routes here
@@ -15,22 +16,22 @@ export default function App() {
     {
       label:'Home',
       url:'/',
-      page:<Home/>
+      page:<HomePage/>
     },
     {
       label:'Projects',
       url:'/projects',
-      page:<Projects/>
+      page:<ProjectsPage/>
     },
     {
       label:'About',
       url:'/about',
-      page:<About/>
+      page:<AboutPage/>
     },
     {
       label:'Contact',
       url:'/contact',
-      page:<Contact/>
+      page:<ContactPage/>
     },
 
   ]
@@ -40,7 +41,7 @@ export default function App() {
   }
   //Main App
   return (
-    <div className="font-sans flex flex-col space-y-10">
+    <div className="font-sans flex flex-col space-y-10 ">
 
       <NavBar routes={routes} />
       
@@ -51,6 +52,7 @@ export default function App() {
           )
         }
       </Routes>
+      <Spacer/>
       <Footer/>
     </div>
   )

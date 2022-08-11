@@ -19,7 +19,7 @@ export default function Technologies(){
     const images=[aws,css,google,html,js,node,postgresql,reactImage,redux,stripe,tailwind,vue]
     
     function renderImages(images){
-        return images.map((image)=><img src={image} className="w-[125px] h-[65px]" alt='technology used'/>
+        return images.map((image,i)=><img key={i} src={image} className="w-[125px] h-[65px]" alt='technology used'/>
         )
     }
     

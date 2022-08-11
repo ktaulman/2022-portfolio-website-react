@@ -8,7 +8,7 @@ import Technologies from "@/components/Home/Technologies"
 import Contact from "@/components/Home/Contact"
 import Section from "@/components/General/Section"
 
-export default function Home (){
+export default function HomePage(){
     //local state 
     return(
         <main className="pt-2 flex flex-col space-y-20 items-center">
