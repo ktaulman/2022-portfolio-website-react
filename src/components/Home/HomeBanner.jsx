@@ -1,5 +1,5 @@
 import React from 'react';
-import SplitPane from '@/components/SplitPane';
+import SplitPane from '@/components/General/SplitPane';
 import homeBannerImage from "@/assets/banner-home.svg"
 import githubLogo from "@/assets/logo-github.png"
 import linkedinLogo from "@/assets/logo-linkedin.png"

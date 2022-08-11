@@ -1,5 +1,5 @@
 import React from 'react';
-import SplitPane from '@/components/SplitPane'
+import SplitPane from '@/components/General/SplitPane'
 
 export default function About(){
     return(

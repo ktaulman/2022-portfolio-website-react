@@ -1,6 +1,6 @@
 import React from 'react'
-import SmallBar from "@/components/SmallBar"
-import SplitPane from "@/components/SplitPane"
+import SmallBar from "@/components/General/SmallBar"
+import SplitPane from "@/components/General/SplitPane"
 import Section from "@/components/General/Section"
 import AboutImage from "@/assets/about-image.svg"
 

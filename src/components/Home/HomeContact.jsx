@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from "@/components/General/Section"
-import SmallBar from "@/components/SmallBar"
+import SmallBar from "@/components/General/SmallBar"
 
 export default function HomeContact(){
     function renderTechnologies(){}

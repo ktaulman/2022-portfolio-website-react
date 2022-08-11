@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from "@/components/Card"
+import Card from "@/components/General/Card"
 import Section from "@/components/General/Section"
 import { AcademicCapIcon,CubeIcon,UserCircleIcon } from '@heroicons/react/solid';
 
@@ -9,7 +9,7 @@ export default function HomeCards(){
             //Card 1
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-emerald-500 py-10 px-6 w-60 flex flex-col justify-center',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-60 flex flex-col justify-center',
                     title:'font-bold uppercase text-black text-xl text-center py-3',
                     description:'text-md text-black text-center py-3',
                     
@@ -25,7 +25,7 @@ export default function HomeCards(){
             //Card 2 
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-emerald-500 py-10 px-6 w-60 flex flex-col justify-center',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-60 flex flex-col justify-center',
                     title:'font-bold uppercase text-black text-center text-xl py-3',
                     description:'text-md text-black text-center py-3',
                     
@@ -41,7 +41,7 @@ export default function HomeCards(){
             //Card 3 
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-emerald-500 py-10 px-6 w-60 flex flex-col justify-center',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-60 flex flex-col justify-center',
                     title:'font-bold uppercase text-black text-center text-xl py-3',
                     description:'text-md text-black text-center py-3',
                     
