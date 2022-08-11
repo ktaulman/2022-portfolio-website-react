@@ -28,7 +28,7 @@ export default function Home (){
                 <HomeTechnologies/>
 
                 {/* Contact Icons */}
-                {/* <HomeContact/> */}
+                <HomeContact/>
             </Section>
         </main>
     )
