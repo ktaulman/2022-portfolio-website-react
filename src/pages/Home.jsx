@@ -1,11 +1,11 @@
 import React from 'react';
 //Home 
-import HomeBanner from "@/components/Home/HomeBanner"
-import HomeCards from "@/components/Home/HomeCards"
-import HomeAbout from '@/components/Home/HomeAbout'
-import HomeProjects from "@/components/Home/HomeProjects"
-import HomeTechnologies from "@/components/Home/HomeTechnologies"
-import HomeContact from "@/components/Home/HomeContact"
+import Banner from "@/components/Home/Banner"
+import Cards from "@/components/Home/Cards"
+import About from '@/components/Home/About'
+import Projects from "@/components/Home/Projects"
+import Technologies from "@/components/Home/Technologies"
+import Contact from "@/components/Home/Contact"
 import Section from "@/components/General/Section"
 
 export default function Home (){
@@ -13,22 +13,22 @@ export default function Home (){
     return(
         <main className="pt-2 flex flex-col space-y-20 items-center">
             {/* Banner */}
-            <HomeBanner/>
+            <Banner/>
 
             <Section className='w-2/3 flex flex-col space-y-10'>
             {/* Card Panel Section */}
-            <HomeCards/> 
+            <Cards/> 
                 {/* About Me Section  */}    
-                <HomeAbout/>
+                <About/>
 
                 {/* Projects Section */}
-                <HomeProjects/>
+                <Projects/>
 
                 {/* Technologies Icons */}
-                <HomeTechnologies/>
+                <Technologies/>
 
                 {/* Contact Icons */}
-                <HomeContact/>
+                <Contact/>
             </Section>
         </main>
     )

@@ -1,11 +1,11 @@
 import React from 'react';
 import SplitPane from '@/components/General/SplitPane';
-import homeBannerImage from "@/assets/banner-home.svg"
+import BannerImage from "@/assets/banner-home.svg"
 import githubLogo from "@/assets/logo-github.png"
 import linkedinLogo from "@/assets/logo-linkedin.png"
 
 
-export default function HomeBanner(){
+export default function Banner(){
     return(
                 <SplitPane 
                     classes={
@@ -32,7 +32,7 @@ export default function HomeBanner(){
                     }
                     right={
                         <div>
-                            <img src={homeBannerImage}  alt='home banner'/>
+                            <img src={BannerImage}  alt='home banner'/>
                         </div>
                     }
                 />

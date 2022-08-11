@@ -15,7 +15,7 @@ import stripe from "@/assets/technologies/stripe.svg"
 import tailwind from "@/assets/technologies/tailwind.svg"
 import vue from "@/assets/technologies/vue.svg"
 
-export default function HomeTechnologies(){
+export default function Technologies(){
     const images=[aws,css,google,html,js,node,postgresql,reactImage,redux,stripe,tailwind,vue]
     
     function renderImages(images){

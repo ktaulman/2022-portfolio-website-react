@@ -4,7 +4,7 @@ import SplitPane from "@/components/General/SplitPane"
 import Section from "@/components/General/Section"
 import AboutImage from "@/assets/about-image.svg"
 
-export default function HomeAbout(){
+export default function About(){
         return(
             <Section className=''>
             

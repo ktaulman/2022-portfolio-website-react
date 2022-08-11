@@ -3,7 +3,7 @@ import Card from "@/components/General/Card"
 import Section from "@/components/General/Section"
 import { AcademicCapIcon,CubeIcon,UserCircleIcon } from '@heroicons/react/solid';
 
-export default function HomeCards(){
+export default function Cards(){
         //cards
         const cards=[
             //Card 1
