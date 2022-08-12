@@ -12,7 +12,7 @@ export default function NavBar({routes}){
         const isActivePageLink=location.pathname===route.url?<ArrowCircleLeftIcon className="ml-2 h-4 w-4 text-white"/>:<div></div>
         //return Link and if active return Page
         return(
-            <div key={route.url} className="flex justify-between items-center px-4 ml-3 py-2 hover:underline hover:font-bold">
+            <div key={route.url} className="flex justify-between items-center py-4 m-0 text-xs sm:px-4 sm:ml-3 sm:py-2 hover:underline hover:font-bold">
                 <Link key={route.label}  to={route.url}>{route.label}</Link>
                 {isActivePageLink}
             </div> 

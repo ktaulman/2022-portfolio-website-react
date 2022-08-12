@@ -10,9 +10,9 @@ export default function Banner(){
                 <SplitPane 
                     classes={
                         {
-                            root:"w-full my-16  border-1 border-black",
-                            left:'w-1/2',
-                            right:"w-1/2"
+                            root:"w-full my-4 sm:my-16  border-1 border-black",
+                            left:'w-full sm:w-1/2',
+                            right:"w-0 sm:w-1/2"
                         }
                     }
                     left={

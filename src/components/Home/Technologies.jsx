@@ -28,7 +28,7 @@ export default function Technologies(){
     <div>
     <SmallBar/>
     <h2 className="text-2xl my-2">Technologies</h2>
-    <div className="flex flex-row flex-wrap">
+    <div className="flex flex-row flex-wrap justify-center">
 
     {renderImages(images)}
     </div>

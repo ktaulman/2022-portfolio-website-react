@@ -3,7 +3,7 @@ import {Routes,Route} from "react-router-dom"
 //Components
 import NavBar from "@/components/NavBar"
 import Footer from "@/components/Footer"
-import Spacer from "@/components/Spacer"
+import Spacer from "@/components/Spacer "
 //Pages
 import HomePage from "@/pages/HomePage"
 import ProjectsPage from '@/pages/ProjectsPage'

@@ -76,9 +76,11 @@ export default function Projects(){
             return  <SplitPane
                             key={i}
                             left={
-                                <img key={i} className="border-2 border-solid rounded-xl border-emerald-500 mr-12 h-[300px] w-[600px]" src={projectOneImage} alt="project image"/>
+                                <img key={i} className="border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[300px] w-[600px] hidden sm:visible" src={projectOneImage} alt="project image"/>
                             }
                             right={
+                                <>
+                                <img key={i} className="border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[300px] w-[600px] visible sm:hidden" src={projectOneImage} alt="project image"/>
                                 <Card
                                     size="md"
                                     key={`Projects_${i}`}
@@ -88,13 +90,14 @@ export default function Projects(){
                                     title={title}
                                     description={description}
                                     controls={controls}
-                                />
+                                    />
+                                    </>
                             
                             }
                             classes={{
                                 root:'my-10',
-                                left:'w-2/3 flex flex-row justify-end items-center',
-                                right:'w-1/3 flex flex-row justify-start'
+                                left:'w-0 sm:w-2/3 flex flex-row justify-end items-center',
+                                right:'w-full sm:w-1/3 flex flex-col justify-center items-center sm:flex-row sm:justify-start'
                             }}
                         />
         })
@@ -104,54 +107,7 @@ export default function Projects(){
             <SmallBar className=" m-auto mr-0"/>
             <h2 className=' text-right text-4xl'>Projects</h2>
             {renderPanes(cards)}
-{/*             
-                    <SplitPane
-                        key={'0'}
-                        left={
-                            <img className="border-2 border-solid rounded-xl border-emerald-500 mr-12 h-[300px] w-[600px]" src={projectOneImage} alt="project image"/>
-                        }
-                        right={
-                            renderCard(cards[0],0)
-                        
-                        }
-                        classes={{
-                            root:'my-10',
-                            left:'w-2/3 flex flex-row justify-end items-center',
-                            right:'w-1/3 flex flex-row justify-start'
-                        }}
-                    />
-                    <SplitPane
-                       key={'1'}
-                        left={
-                            <img className="border-2 border-solid rounded-xl border-emerald-500 mr-12 h-[300px] w-[600px]" src={projectTwoImage} alt="project image"/>
-                        }
-                        right={
-                            renderCard(cards[1],1)
-                        
-                        }
-                        classes={{
-                            root:'my-10',
-                            left:'w-2/3 flex flex-row justify-end',
-                            right:'w-1/3 flex flex-row justify-start'
-                        }}
-                    />
-                    <SplitPane
-                       key={'2'}
-                        left={
-                            <img className="border-2 border-solid rounded-xl border-emerald-500 mr-12 h-[300px] w-[600px]" src={projectThreeImage} alt="project image"/>
-                        }
-                        right={
-                            renderCard(cards[2],2)
-                        
-                        }
-                        classes={{
-                            root:'my-10',
-                            left:'w-2/3 flex flex-row justify-end',
-                            right:'w-1/3 flex flex-row justify-start'
-                        }}
-                    />
-                         
-                        */}
+
         </Section>
     )
 }

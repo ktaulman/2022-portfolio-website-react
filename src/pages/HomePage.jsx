@@ -15,7 +15,7 @@ export default function HomePage(){
             {/* Banner */}
             <Banner/>
 
-            <Section className='w-2/3 flex flex-col space-y-10'>
+            <Section className='w-4/5 sm:2/3 flex flex-col space-y-10'>
             {/* Card Panel Section */}
             <Cards/> 
                 {/* About Me Section  */}    

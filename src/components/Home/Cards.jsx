@@ -9,7 +9,7 @@ export default function Cards(){
             //Card 1
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-60 flex flex-col justify-center',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-full sm:w-60 flex flex-col justify-center h-80 sm:h-auto',
                     title:'font-bold uppercase text-black text-xl text-center py-3',
                     description:'text-md text-black text-center py-3',
                     
@@ -25,7 +25,7 @@ export default function Cards(){
             //Card 2 
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-60 flex flex-col justify-center',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-full sm:w-60 flex flex-col justify-center h-80 sm:h-auto',
                     title:'font-bold uppercase text-black text-center text-xl py-3',
                     description:'text-md text-black text-center py-3',
                     
@@ -36,12 +36,12 @@ export default function Cards(){
                     src:<CubeIcon className='text-emerald-500 w-20'/>,
                 },
                 title:'Full Stack Development',
-                description:["For me, it's nice to know all sides of the process. Whatever technology will help us build apps, I'll learn. "],
+                description:["For me, it is nice to know all sides of the process. Whatever technology will help us build apps, I'll learn and make sure to implement it. "],
             },
             //Card 3 
             {
                 classes:{
-                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-60 flex flex-col justify-center',
+                    root:'border-solid border-4 rounded-lg border-emerald-500 py-5 px-6 w-full sm:w-60 flex flex-col justify-center h-80 sm:h-auto',
                     title:'font-bold uppercase text-black text-center text-xl py-3',
                     description:'text-md text-black text-center py-3',
                     
@@ -75,7 +75,7 @@ export default function Cards(){
              })
          }
     return(
-            <Section className="w-full py-4 flex justify-center space-x-10">
+            <Section className="w-full py-4 flex flex-col justify-center items-center space-y-10 sm:flex-row sm:space-x-10 sm:space-y-0 sm:items-stretch">
                 {renderCards(cards)}
             </Section>
     )
