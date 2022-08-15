@@ -22,7 +22,9 @@ export default function Projects(){
             controls:[
                 <a className="bg-emerald-500 text-white px-1 py-2">Live Site</a>
             ],
-            media:{}
+            media:{
+                src:projectOneImage
+            }
         },
         {
             classes:{
@@ -36,7 +38,9 @@ export default function Projects(){
             controls:[
                 <a className="bg-emerald-500 text-white px-1 py-2">Live Site</a>
             ],
-            media:{}
+            media:{
+                src:projectTwoImage
+            }
         },
         {
             classes:{
@@ -50,7 +54,9 @@ export default function Projects(){
             controls:[
                 <a className="bg-sky-600 text-white px-1 py-2">React Code</a>
             ],
-            media:{}
+            media:{
+                src:projectThreeImage
+            }
         },
     ]
 
@@ -76,20 +82,19 @@ export default function Projects(){
             return  <SplitPane
                             key={i}
                             left={
-                                <img key={i} className="border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[300px] w-[600px] hidden sm:visible" src={projectOneImage} alt="project image"/>
+                                <img key={i} className="border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[300px] w-[600px] invisible sm:visible" src={media.src} alt="project image"/>
                             }
                             right={
                                 <>
-                                <img key={i} className="border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[300px] w-[600px] visible sm:hidden" src={projectOneImage} alt="project image"/>
-                                <Card
-                                    size="md"
-                                    key={`Projects_${i}`}
-                                    classes={classes}
-                                    direction={direction}
-                                    media={media}
-                                    title={title}
-                                    description={description}
-                                    controls={controls}
+                                    <Card
+                                        size="md"
+                                        key={`Projects_${i}`}
+                                        classes={classes}
+                                        direction={direction}
+                                        media={media}
+                                        title={title}
+                                        description={description}
+                                        controls={controls}
                                     />
                                     </>
                             

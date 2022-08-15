@@ -12,7 +12,7 @@ export default function About(){
                 left={
                     <div className="flex flex-col px-3 pr-4">
                         <SmallBar/>
-                        <img src={AboutImage} alt="kevin taulman image" className="sm:hidden"/>
+                        {/* <img src={AboutImage} alt="kevin taulman image" className="sm:visible"/> */}
                         <h2 className="text-4xl">About Me</h2>
                         <p className="my-10 text-lg">
                             Hi, my name's Kevin Taulman, a Web Developer/Software Engineer from Atlanta, GA. I love building web applications that help solve issues or enable a new idea!
@@ -23,7 +23,7 @@ export default function About(){
                     </div>
                 }
                 right={
-                    <img src={AboutImage} className="hidden sm:visible" alt="kevin taulman image"/>
+                    <img src={AboutImage} className="invisible sm:visible" alt="kevin taulman image"/>
                 }
                 classes={{
 
