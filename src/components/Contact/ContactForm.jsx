@@ -29,8 +29,8 @@ export default function ContactForm(){
             <h1 className="text-3xl font-bold">Contact Me</h1>
             <input id="contact_name" className="px-2 py-1 placeholder:text-sm text-sm w-full active:focus:ring-0" placeholder='Your Name' onInput={e=>setName(e.target.value)}></input>
             <input id="contact_company" className="px-2 py-1 placeholder:text-sm text-sm w-full" placeholder='Your Email Address' onInput={e=>setCompany(e.target.value)}></input>
-            <input id="contact_email" className="px-2 py-1 placeholder:text-sm text-sm w-full" placeholder='Your Message' onInput={e=>setEmail(e.target.value)}></input>
-            <textarea onInput={e=>setMessage(e.target.value)} className="w-full ring-2 ring-black rounded-lg h-48 p-2 text-sm"></textarea>
+            <h2>Your Message</h2>
+            <textarea id="contact_email" onInput={e=>setMessage(e.target.value)} className="w-full ring-2 ring-black rounded-lg h-48 p-2 text-sm"></textarea>
             <button type="submit" className="border-2 border-solid border-emerald-500 rounded-lg py-1 px-2 hover:text-white hover:bg-emerald-500">Submit</button>
             {error?<div>{error}</div>:null}
         </form>

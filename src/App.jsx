@@ -19,8 +19,8 @@ export default function App() {
       page:<HomePage/>
     },
     {
-      label:'Projects',
-      url:'/projects',
+      label:'Work',
+      url:'/work',
       page:<ProjectsPage/>
     },
     {
