@@ -39,7 +39,7 @@ export default function Projects(){
             title:'Autumn Doors',
             description:[" Designed, developed, and deployed an eCommerce website that sold interior, sliding, barn doors in Texas and Florida.", "Technologies used were Javascript, HTML, CSS, React (Material UI Components), React Router (Routing), Redux (Stage Management), NodeJS (Express Framework), NodeMailer (Email), Stripe SDK"],
             controls:[
-                <a className="bg-emerald-500 text-white px-1 py-2">Live Site</a>
+                <a className="bg-emerald-500 text-white px-1 py-2" href="https://www.autumndoors.com" target="_blank">Live Site</a>
             ],
             media:{
                 src:projectOneImage
@@ -55,7 +55,7 @@ export default function Projects(){
             title:'The PAVE Foundation',
             description:[" Designed, developed, and deployed a non-profit's that teaching STEM and Arts Education to African American Girls. I continued on, post-development, as their Technology Director.", "Technologies used were Javascript, HTML, CSS, React (Material UI Components), React Router (Routing), Redux (Stage Management), NodeJS (Express Framework), NodeMailer (Email), Stripe SDK"],
             controls:[
-                <a className="bg-emerald-500 text-white px-1 py-2">Live Site</a>
+                <a className="bg-emerald-500 text-white px-1 py-2" href="https://www.thepavefoundation.org" target="_blank">Live Site</a>
             ],
             media:{
                 src:projectTwoImage
@@ -71,7 +71,7 @@ export default function Projects(){
             title:'This Portfolio Website',
             description:[" Designed, developed, and deployed as an example of my React capabilities. It has an emphasis on reusable components, well organized files and folder structures, and is publicly available", "Technologies used were Tailwind CSS, React, React Router (Routing), and Vite."],
             controls:[
-                <a className="bg-sky-600 text-white px-1 py-2">React Code</a>
+                <a className="bg-sky-600 text-white px-1 py-2" href="https://github.com/ktaulman/2022-portfolio-website-react" target="_blank">React Code</a>
             ],
             media:{
                 src:projectThreeImage

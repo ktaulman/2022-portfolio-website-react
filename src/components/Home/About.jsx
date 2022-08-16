@@ -18,7 +18,7 @@ export default function About(){
                             Hi, my name's Kevin Taulman, a Web Developer/Software Engineer from Atlanta, GA. I love building web applications that help solve issues or enable a new idea!
                         </p>
                         <p className=" text-lg">
-                            I work primarily with React, Vue, Express, Node, and SQL and volunteer as the the Technology Director for a Non-Profit. I've been fortunate enough to be able to learn about AWS, Google Cloud, and more but building out their technology infrastructure! 
+                            I work primarily with React, Vue, Express, Node, and SQL and volunteer as the the Technology Director for a Non-Profit. I've been fortunate enough to be able to learn about AWS, Google Cloud, and more by building out their technology infrastructure! 
                         </p>
                     </div>
                 }
