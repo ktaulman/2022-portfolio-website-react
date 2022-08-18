@@ -41,7 +41,7 @@ export default function App() {
   }
   //Main App
   return (
-    <div className="font-sans flex flex-col space-y-10 ">
+    <div className="font-sans flex flex-col space-y-10">
 
       <NavBar routes={routes} />
       
