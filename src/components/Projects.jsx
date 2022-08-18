@@ -25,7 +25,7 @@ export default function Projects() {
         // <a className="bg-sky-600 text-white px-1 py-2">React Code</a>
       ],
       media: {
-        src: "https://mapsimply-video.s3.amazonaws.com/MapSimplyScreenGrab.mp4",
+        src: "https://mapsimply-video.s3.amazonaws.com/Wide_Video.mp4",
         type: "video",
         classes: "",
       },
@@ -100,6 +100,13 @@ export default function Projects() {
         >
           React Code
         </a>,
+        <a
+        className="bg-emerald-500 text-white px-1 py-2 ml-3"
+        href="https://github.com/ktaulman/2022-portfolio-website-backend"
+        target="_blank"
+      >
+        Node Code
+      </a>
       ],
       media: {
         src: projectThreeImage,
@@ -131,7 +138,7 @@ export default function Projects() {
             width="600"
             height="250"
             controls
-            className={`border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 invisible sm:visible h-[300px]    ${card.media.classes}`}
+            className={`border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 invisible sm:visible h-[250px] w-full max-w-md   ${card.media.classes}`}
             src={card.media.src}
             alt="project video"
           />
@@ -140,7 +147,8 @@ export default function Projects() {
         return (
           <img
             key={i}
-            className={`border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[300px] w-[600px] invisible sm:visible ${card.media.classes}`}
+            height="250"
+            className={`border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[250px] w-full invisible sm:visible max-w-md p-0  ${card.media.classes}`}
             src={card.media.src}
             alt="project image"
           />
