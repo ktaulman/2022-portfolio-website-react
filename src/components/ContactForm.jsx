@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import {sendAPIRequest} from '@/services/API'
-export default function ContactForm(){
+export default function ContactForm({classes}){
     //useState
     const [name,setName]=useState(null)
     const [email,setEmail]=useState(null)
@@ -28,7 +28,7 @@ export default function ContactForm(){
     },[name,email,message])
     
     return(
-        <form className="flex flex-col justify-start items-center w-4/5 border-2 border-solid rounded-xl shadow-lg py-2 px-3 gap-4" onSubmit={e=>handleSubmit(e)}>
+        <form id="contact-form" className="flex flex-col justify-start items-center  border-2 border-solid rounded-xl shadow-lg py-2 px-3 gap-4 w-full max-w-4xl max-h-[450px]" onSubmit={e=>handleSubmit(e)}>
            <h1 className="text-3xl font-bold">Contact Me</h1>
            {!success?<> <input id="contact_name" className="px-2 py-1 placeholder:text-sm text-sm w-full active:focus:ring-0" placeholder='Your Name' onInput={e=>setName(e.target.value)}></input>
             <input id="contact_company" className="px-2 py-1 placeholder:text-sm text-sm w-full" placeholder='Your Email Address' onInput={e=>setEmail(e.target.value)}></input>

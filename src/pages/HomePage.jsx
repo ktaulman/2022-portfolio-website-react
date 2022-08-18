@@ -11,11 +11,11 @@ import Section from "@/components/layout/Section";
 export default function HomePage() {
   //local state
   return (
-    <main className="pt-2 flex flex-col space-y-20 items-center">
+    <main className="pt-2 flex flex-col items-center justify-center">
       {/* Banner */}
       <Banner />
 
-      <Section className="w-4/5 sm:2/3 flex flex-col space-y-10">
+      <Section className=" flex flex-col gap-28 w-4/5 lg:w-2/3">
         {/* Card Panel Section */}
         <Cards />
         {/* About Me Section  */}

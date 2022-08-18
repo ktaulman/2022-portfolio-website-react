@@ -16,20 +16,10 @@ import tailwind from "@/assets/technologies/tailwind.svg";
 import vue from "@/assets/technologies/vue.svg";
 
 export default function Technologies() {
-  const images = [
-    aws,
-    css,
-    google,
-    html,
-    js,
-    node,
-    postgresql,
-    reactImage,
-    redux,
-    stripe,
-    tailwind,
-    vue,
-  ];
+
+  const images=[
+    html,css,js,reactImage,redux,vue,tailwind,node,postgresql,aws,google,stripe
+  ]
 
   function renderImages(images) {
     return images.map((image, i) => (
@@ -46,7 +36,7 @@ export default function Technologies() {
     //
     <div>
       <SmallBar />
-      <h2 className="text-2xl my-2">Technologies</h2>
+      <h2 className="text-4xl my-2">Technologies</h2>
       <div className="flex flex-row flex-wrap justify-center">
         {renderImages(images)}
       </div>
