@@ -39,7 +39,7 @@ export default function Projects() {
       direction: "vertical",
       title: "Autumn Doors",
       description: [
-        " Designed, developed, and deployed an eCommerce website that sold interior, sliding, barn doors in Texas and Florida.",
+        " Designed, developed, and deployed an eCommerce website that sells interior, sliding barn doors in Texas and Florida.",
         "Technologies used were Javascript, HTML, CSS, React (Material UI Components), React Router (Routing), Redux (Stage Management), NodeJS (Express Framework), NodeMailer (Email), Stripe SDK",
       ],
       controls: [
@@ -64,7 +64,7 @@ export default function Projects() {
       direction: "vertical",
       title: "The PAVE Foundation",
       description: [
-        " Designed, developed, and deployed a non-profit's that teaching STEM and Arts Education to African American Girls. I continued on, post-development, as their Technology Director.",
+        " Designed, developed, and deployed a non-profit's website & infrastrcture. Their mission is to advance STEM and Arts Education for African American Girls in the Atlanta area. I continued on, post-development, as their Technology Director.",
         "Technologies used were Javascript, HTML, CSS, React (Material UI Components), React Router (Routing), Redux (Stage Management), NodeJS (Express Framework), NodeMailer (Email), Stripe SDK",
       ],
       controls: [
@@ -89,8 +89,8 @@ export default function Projects() {
       direction: "vertical",
       title: "This Portfolio Website",
       description: [
-        " Designed, developed, and deployed as an example of my React capabilities. It has an emphasis on reusable components, well organized files and folder structures, and is publicly available",
-        "Technologies used were Tailwind CSS, React, React Router (Routing), and Vite.",
+        " Designed, developed, and deployed as an example of my React capabilities. It has an emphasis on reusable components, well organized files and folder structures, and is publicly available","Includes Node backend deployed to AWS Lamba using GMail and Nodemailer to handle contact form submissions.",
+        "Technologies used were Tailwind CSS, React, React Router (Routing), Vite, AWS Lamba, and Node.",
       ],
       controls: [
         <a
@@ -114,21 +114,6 @@ export default function Projects() {
     },
   ];
 
-  //  function renderCard(card){
-  //     const {classes,direction,title,description,controls,media}=card
-  //                return(
-  //                  <Card
-  //                      size="md"
-  //                      classes={classes}
-  //                      direction={direction}
-  //                      media={media}
-  //                      title={title}
-  //                      description={description}
-  //                      controls={controls}
-  //                  />
-  //                )
-  //  }
-  // const {classes,direction,title,description,controls,media}=card
   function renderPanes(cards) {
     //helper function
     function generateMediaElement(card, i) {
