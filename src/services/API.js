@@ -5,10 +5,10 @@ export function sendAPIRequest(method,payload,url){
             var raw = JSON.stringify(payload);
 
             var requestOptions = {
-            method: method,
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
+                method: method,
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
             };
 
            return fetch(url, requestOptions)
