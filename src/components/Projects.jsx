@@ -54,7 +54,7 @@ export default function Projects() {
       ],
       media: {
         src: projectOneImage,
-        classes:"border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[200px] sm:h-[350px] w-full min-w-sm  max-w-lg w-full p-0"
+        classes:"border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[200px] sm:h-[350px] w-full min-w-sm  max-w-lg w- p-0"
       },
     },
     {
@@ -170,7 +170,7 @@ export default function Projects() {
             root: "my-10 flex flex-col sm:flex-row sm:justify-center w-full",
             left: "flex flex-row justify-end items-center ",
             right:
-              "flex flex-col justify-center items-start sm:flex-row sm:justify-start ",
+              "flex flex-col justify-center items-center sm:flex-row sm:justify-start ",
           }}
         />
       );
