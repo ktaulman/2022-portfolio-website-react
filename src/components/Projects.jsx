@@ -9,6 +9,7 @@ import projectTwoImage from "@/assets/project-2.svg";
 import projectThreeImage from "@/assets/project-3.svg";
 
 export default function Projects() {
+  
   let cards = [
     {
       classes: {
@@ -27,7 +28,7 @@ export default function Projects() {
       media: {
         src: "https://mapsimply-video.s3.amazonaws.com/Wide_Video.mp4",
         type: "video",
-        classes: "",
+        classes: "border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[200px] sm:h-[350px]  w-full max-w-lg ",
       },
     },
     {
@@ -53,6 +54,7 @@ export default function Projects() {
       ],
       media: {
         src: projectOneImage,
+        classes:"border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[200px] sm:h-[350px] w-full min-w-sm  max-w-lg w- p-0"
       },
     },
     {
@@ -78,6 +80,7 @@ export default function Projects() {
       ],
       media: {
         src: projectTwoImage,
+        classes:"border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[200px] sm:h-[350px] w-full min-w-sm  max-w-lg w-full p-0"
       },
     },
     {
@@ -110,6 +113,7 @@ export default function Projects() {
       ],
       media: {
         src: projectThreeImage,
+        classes:"border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[200px] sm:h-[350px] w-full min-w-sm  max-w-lg w-full p-0"
       },
     },
   ];
@@ -123,7 +127,7 @@ export default function Projects() {
             width="600"
             height="250"
             controls
-            className={`border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 invisible sm:visible h-[250px] w-full max-w-md   ${card.media.classes}`}
+            className={` ${card.media.classes}`}
             src={card.media.src}
             alt="project video"
           />
@@ -133,7 +137,7 @@ export default function Projects() {
           <img
             key={i}
             height="250"
-            className={`border-2 border-solid rounded-xl border-emerald-500 m-0 sm:mr-12 h-[250px] w-full invisible sm:visible max-w-md p-0  ${card.media.classes}`}
+            className={`${card.media.classes}`}
             src={card.media.src}
             alt="project image"
           />
@@ -163,10 +167,10 @@ export default function Projects() {
             </>
           }
           classes={{
-            root: "my-10",
-            left: "w-0 sm:w-2/3 flex flex-row justify-end items-center",
+            root: "my-10 flex flex-col sm:flex-row sm:justify-center w-full",
+            left: "flex flex-row justify-end items-center ",
             right:
-              "w-full sm:w-1/3 flex flex-col justify-center items-start sm:flex-row sm:justify-start",
+              "flex flex-col justify-center items-center sm:flex-row sm:justify-start ",
           }}
         />
       );

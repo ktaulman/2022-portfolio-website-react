@@ -7,7 +7,7 @@ export default function ProjectsPage() {
 
   return (
     <Section className="flex justify-center">
-      <div className="w-3/5">
+      <div className="w-full sm:3/5">
         <Projects />
       </div>
     </Section>
