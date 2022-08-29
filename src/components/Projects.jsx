@@ -67,7 +67,7 @@ export default function Projects() {
       title: "The PAVE Foundation",
       description: [
         " Designed, developed, and deployed a non-profit's website & infrastrcture. Their mission is to advance STEM and Arts Education for African American Girls in the Atlanta area. I continued on, post-development, as their Technology Director.",
-        "Technologies used were Javascript, HTML, CSS, React (Material UI Components), React Router (Routing), Redux (Stage Management), NodeJS (Express Framework), NodeMailer (Email), Stripe SDK",
+        "Technologies used were Javascript, HTML, CSS, React (Material UI Components), React Router (Routing), Redux (Central Store), NodeJS (Express Framework), NodeMailer (Email), Stripe SDK (Payments)",
       ],
       controls: [
         <a
