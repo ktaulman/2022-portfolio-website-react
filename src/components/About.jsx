@@ -5,14 +5,13 @@ import Section from "@/components/layout/Section";
 import AboutImage from "@/assets/about-image.svg";
 
 export default function About({ title, paragraphs }) {
-  // const paragraphs = [
-  //   `Hi, my name's Kevin Taulman, a Software Engineer from Atlanta, GA. I love building web applications that help solve issues or enable new ideas!`,
-  //   ` I work primarily with React, Vue, Node, and SQL. Currently I volunteer as the Technology Director for a non-profit. I've been fortunate enough to be able to learn about AWS, Google Cloud, and more by building out their technology infrastructure!`,
-  // ];
-
   function renderParagraphs(paragraphs) {
     return paragraphs.map((paragraph, i) => {
-      return <p className="text-lg">{paragraph}</p>;
+      return (
+        <p key={i} className="text-lg">
+          {paragraph}
+        </p>
+      );
     });
   }
 
@@ -20,7 +19,7 @@ export default function About({ title, paragraphs }) {
     <Section className=" flex flex-row justify-center flex-wrap">
       <div className="self-start justify-start flex-1">
         <SmallBar />
-        <h2 className="text-4xl">About Me</h2>
+        <h2 className="text-4xl">{title}</h2>
       </div>
 
       <SplitPane
