@@ -11,9 +11,8 @@ export default function AboutPage() {
       const json = await data.json();
       callback(json.About);
     };
-    fetchData("config.json", setData);
-    console.log(data);
-  }, [data]);
+    fetchData("content.json", setData);
+  }, []);
   if (!data) return;
   return (
     <Section className=" flex flex-col justify-center items-center h-screen">

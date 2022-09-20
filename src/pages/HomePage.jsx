@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 //Home
 import Banner from "@/components/Banner";
-import Cards from "@/components/Cards";
+import SummaryCards from "@/components/SummaryCards";
 import About from "@/components/About";
 import Projects from "@/components/Projects";
 import Technologies from "@/components/Technologies";
@@ -43,11 +43,10 @@ export default function HomePage() {
     const fetchData = async (url) => {
       const data = await fetch(url);
       const json = await data.json();
-      // console.log(data, json);
       await setData(json);
     };
-    fetchData("config.json");
-  }, [data]);
+    if (!data) fetchData("content.json");
+  }, []);
 
   if (!data) return;
 
@@ -58,7 +57,7 @@ export default function HomePage() {
 
       <Section className=" flex flex-col gap-28 w-4/5 lg:w-2/3">
         {/* Card Panel Section */}
-        <Cards items={data.Cards} />
+        <SummaryCards items={data.Cards} />
         {/* About Me Section  */}
         <About title={data.About.title} paragraphs={data.About.paragraphs} />
 

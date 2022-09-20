@@ -5,6 +5,7 @@ import Section from "@/components/layout/Section";
 import AboutImage from "@/assets/about-image.svg";
 
 export default function About({ title, paragraphs }) {
+  //Rendering Function
   function renderParagraphs(paragraphs) {
     return paragraphs.map((paragraph, i) => {
       return (
@@ -14,7 +15,7 @@ export default function About({ title, paragraphs }) {
       );
     });
   }
-
+  //Component Render
   return (
     <Section className=" flex flex-row justify-center flex-wrap">
       <div className="self-start justify-start flex-1">

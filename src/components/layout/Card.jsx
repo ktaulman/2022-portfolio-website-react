@@ -42,12 +42,12 @@ export default function Card({
         dir = "flex flex-row justify-start items-center";
         break;
     }
-    //compute root cllas
+    //compute root class
     root = rootClass ? rootClass : "";
 
-    size = size + " " + dir + " " + root + " " + "rounded-xl";
+    let result = size + " " + dir + " " + root + " " + "rounded-xl";
 
-    return size;
+    return result;
   };
   function renderDescription(description, css) {
     return description.map((paragraph) => (
@@ -57,6 +57,7 @@ export default function Card({
     ));
   }
   function renderMedia(media) {
+    if (!media) return;
     let result;
     switch (media.type) {
       case "icon":
@@ -77,10 +78,17 @@ export default function Card({
   }
   function renderControls(controls) {
     if (!controls) return;
-    return controls.map((el) => {
-      const { css, url, title } = el;
+    return controls.map((el, i) => {
+      const { url, title } = el;
       return (
-        <a className={css} href={url} target="_blank">
+        <a
+          key={i}
+          className={`${
+            i % 2 ? "bg-emerald-500" : "bg-sky-600"
+          } text-white px-1 py-2 mx-3`}
+          href={url}
+          target="_blank"
+        >
           {title}
         </a>
       );
@@ -101,7 +109,9 @@ export default function Card({
 
       {/* Flexible Area for Buttons,Icons,Liks */}
 
-      <div className="flex flex-row">{renderControls(controls)}</div>
+      <div className="flex flex-row justify-center align-center w-full">
+        {renderControls(controls)}
+      </div>
       {children}
     </section>
   );
