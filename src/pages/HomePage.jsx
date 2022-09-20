@@ -43,7 +43,6 @@ export default function HomePage() {
     const fetchData = async (url) => {
       const data = await fetch(url);
       const json = await data.json();
-      // console.log(data, json);
       await setData(json);
     };
     if (!data) fetchData("content.json");
