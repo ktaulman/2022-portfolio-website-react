@@ -8,11 +8,10 @@ export default function ProjectsPage() {
     const fetchData = async (url) => {
       const data = await fetch(url);
       const json = await data.json();
-      // console.log(data, json);
       await setData(json);
     };
-    fetchData("config.json");
-  }, [data]);
+    fetchData("content.json");
+  }, []);
   if (!data) return;
   return (
     <Section className="flex justify-center">

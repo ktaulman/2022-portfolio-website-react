@@ -77,10 +77,10 @@ export default function Card({
   }
   function renderControls(controls) {
     if (!controls) return;
-    return controls.map((el) => {
+    return controls.map((el, i) => {
       const { css, url, title } = el;
       return (
-        <a className={css} href={url} target="_blank">
+        <a key={i} className={css} href={url} target="_blank">
           {title}
         </a>
       );
@@ -101,7 +101,9 @@ export default function Card({
 
       {/* Flexible Area for Buttons,Icons,Liks */}
 
-      <div className="flex flex-row">{renderControls(controls)}</div>
+      <div className="flex flex-row space-evenly">
+        {renderControls(controls)}
+      </div>
       {children}
     </section>
   );

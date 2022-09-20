@@ -119,7 +119,7 @@
       "classes": {
         "root": "flex flex-row items-start",
         "title": "font-bold text-4xl text-center",
-        "description": "my-1"
+        "description": "my-1 bg-black"
       },
       "direction": "vertical",
       "title": "This Portfolio Website",
@@ -130,7 +130,7 @@
       ],
       "controls": [
         {
-          "css": "bg-sky-600 text-white px-1 py-2",
+          "css": "bg-emerald-600 text-white px-1 py-2 mx-2",
           "url": "https://github.com/ktaulman/2022-portfolio-website-react",
           "title": "React Code"
         },
